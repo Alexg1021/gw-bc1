@@ -1,0 +1,381 @@
+<!--.row>(.col-md-3>h2.text-right)+.col-md-9-->
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Geekwise Javascript 1</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700'
+              rel='stylesheet'
+              type='text/css'>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./static/css/prism.css" />
+        <link rel="stylesheet" href="./static/css/reset.css">
+        <link rel="stylesheet" href="./static/css/style.css">
+    </head>
+    <body class="theme day">
+        <header id="nav">
+        </header>
+
+        <div class="container content">
+            <h1 class="row text-center hdr">
+                Day 8
+            </h1>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="text-right">Concepts</h2>
+                </div>
+                <div class="col-md-9 concepts">
+                    <ul>
+                        <li>Review Take Home Assignment</li>
+                        <li>Skill Builder</li>
+                        <li>Github</li>
+                        <li>The DOM</li>
+                        <li>Selecting Elements on a Page</li>
+                        <li>Take Home Assignment</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="text-right">Skill Builder</h2>
+                </div>
+                <div class="col-md-9">
+                    <div class="point">
+                        <ul class="list">
+                            <li>Navigate to <a href="https://github.com/">Github</a>. Once you are there either create an account or sign into your account. If you do have an account you have already completed the first step</li>
+                            <li>Create a "Repo." We will use this in a bit</li>
+                            <li>Open Sublime or your favorite text editor and create an empty <span class="success">index.html</span> file as well as a <span class="success">style.css</span> and a <span class="success">app.js</span></li>
+                            <li>Make sure you link everything in the index.html file correctly</li>
+                            <li>Use Bootstrap's CDN (If you don't know what that is, Google it! It will be one of the first things that pops up!)</li>
+                            <li>Using some of the things we learned from the last lesson create an empty array within the Javascript file</li>
+                            <li>Prompt the user for a string, and "push" it onto the array from the above bullet point</li>
+                            <li>When you have compeleted this you have completed the skill builder! And you are ready for git!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Github</h2>
+                </div>
+                <div class="col-md-9">
+                    <div class="point">
+                        Github is an extremely useful version control system. It functions as a storage space for your projects and also as a tool for working on a project with a team. We use Github regularly to share code and collaborate
+                        on projects.
+                    </div>
+
+                    <div class="point">
+                        Go through these links and familiarize yourself with the command line and git:
+                        <ul>
+                            <li><a href="https://try.github.io/levels/1/challenges/1">Click this link and do this now; it shouldn't take longer than 15-20 mins.</a></li>
+                            <li><a href="http://rogerdudler.github.io/git-guide/">Git - The Simple Guide</a></li>
+                            <li>
+                                <a href="http://www.git-tower.com/learn/git/ebook/command-line/appendix/command-line-101">Command Line 101</a>
+                            </li>
+                            <li><a href="https://help.github.com/articles/set-up-git/">Set Up Git</a></li>
+                            <li><a href="https://help.github.com/articles/generating-ssh-keys/">Generating SSH Keys</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="point">
+                        Though the git gui is available, we recommend using and familiarizing yourself with the command line. It will become
+                        very useful the further into app development you go. Also, though you can use standard http protocols to communicate
+                        with github, it is much more secure to utilize the ssh key transmission.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="text-right">The DOM</h2>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="point">
+                            What is the DOM?
+                        </div>
+                        <div class="point">
+                            The Document Object Model (DOM) is a programming interface for HTML.  It's what allows Javascript to
+                            manipulate an HTML page after it's been loaded in the browser.
+                        </div>
+                        <div class="point">
+                            The DOM provides a representation of the document as a structured group of nodes and objects that have
+                            properties and methods
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>
+                            Accessing Page Elements
+                        </h3>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="point">
+                            Javascript wouldn't be of much use to us if we couldn't use it to manipulate HTML pages in some way.
+                        </div>
+
+                        <div class="point">
+                            In order to begin manipulating elements on the page, we need to know how to "reference" those items.
+                            For example, if we want to change our page's &lt;h1&gt; tag, we need to be able to tell Javascript
+                            which node on the page we want to change.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>
+                            Selecting Elements on a Page
+                        </h3>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="point">
+                            So, using the example above, let's setup an HTML page with an h1 tag in it.
+                        </div>
+
+<pre>
+    <code class="language-markup">
+        &lt;!doctype HTML&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;h1 id="myHdr"&gt;This is an h1 tag&lt;/h1&gt;
+
+        &lt;script type="text/javascript" src="./static/js/day7.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+
+                        <div class="point">
+                            The DOM gives us some nice ways to select elements on a page for manipulating.  The first method we'll discuss
+                            is called <code>document.getElementById()</code>.
+                        </div>
+
+                        <div class="point">
+                            Let's select the h1 tag using the <code>getElementById</code> function.  It takes as an <code>argument</code>
+                            the id of the element you want to select, <code>myHdr</code> in this case.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        var h1 = document.getElementById("myHdr");
+        console.log(h1);
+    </code>
+</pre>
+
+                        <div class="point">
+                            Run that page in your browser. You should see the element logged to your console.
+                        </div>
+
+                        <div class="point">
+                            Now type <code>h1.</code> (notice the period).  The console should now show you all the various properties
+                            and functions available as part of that object.
+                        </div>
+
+                        <h3>Element Attributes</h3>
+
+                        <div class="point">
+                            You can now see that a "node" or "element" has an underlying Javascript object that provides all kinds of
+                            methods for you to interact with it.  Let's look at some attributes.  First, modify your <code>h1</code>
+                            tag to include a <code>class="hdr"</code> attribute.
+                        </div>
+
+<pre>
+    <code class="language-markup">
+        &lt;h1 id="myHdr" class="hdr"&gt;This is an h1 tag&lt;/h1&gt;
+    </code>
+</pre>
+
+                        <div class="point">
+                            Now let's use the <code>h1.hasAttribute()</code> function to see if the given DOM node has a specific
+                            attribute.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        var hasClass = h1.hasAttribute("class");
+        console.log("The h1 tag has a class attribute: ", hasClass);
+    </code>
+</pre>
+
+                        <div class="point">
+                            Run the code above. It returns <code>boolean</code>; so if the attribute exists, it will return <code>true</code>,
+                            otherwise it will return <code>false</code>.
+                        </div>
+
+                        <div class="point">
+                            Cool! So we can see if an element has a specific attribute. What about adding new attributes?  Easily done.
+                            Using the same DOM node we can call the <code>h1.setAttribute()</code>.  It takes two arguments in its
+                            signature; the property name to set, and its value.  Let's add a <code>rel</code> attribute.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        h1.setAttribute("rel", "something");
+        console.log(h1);
+    </code>
+</pre>
+
+                        <div class="point">
+                            Awesome! Now we can add and look at attributes on a DOM node. I guess the only thing left is to be
+                            able to remove them.  This is done with the <code>removeAttribute</code> function.
+                        </div>
+
+                        <div class="point">
+                            Let's remove the rel attribute now.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        h1.removeAttribute("rel");
+    </code>
+</pre>
+
+                        <div class="point">
+                            These functions become really handy, so practice them!  You can now manipulate ANY webpage you go to that
+                            utilizes ids on their elements using your console!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Other Ways of Selecting DOM Nodes</h3>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="point">
+                            Let's add some markup to our HTML page.
+                        </div>
+
+<pre>
+    <code class="language-markup">
+        &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://google.com"&gt;google&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://yahoo.com"&gt;yahoo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://github.com"&gt;github&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    </code>
+</pre>
+
+                        <div class="point">
+                            There are alternatives to <code>getElementById</code> for cases where an item might not have an id,
+                            or you want to use an alternative syntax.  The first is <code>document.querySelector</code>.
+                            Let's try that now:
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        var a = document.querySelector("ul li a");
+        console.log(a);
+    </code>
+</pre>
+
+                        <div class="point">
+                            What does that yield?  Is it what you would expect?  It should return the first matched element for the
+                            specified selector.
+                        </div>
+
+                        <div class="point">
+                            Let's pick the "selector" apart.  We used <code>ul li a</code>.  What this is really saying is, "Find any
+                            <code>a</code> tags that are children of <code>li</code> tags, where the <code>li</code> tag is a child
+                            of a <code>ul</code> tag." Put another way, "Find all anchor tags that are inside an li tag inside a ul."
+                        </div>
+
+                        <div class="point">
+                            The <code>querySelector</code> function always returns a node or null if no node was matched.  If multiple
+                            nodes were selected, only the first will be returned.
+                        </div>
+
+                        <div class="point">
+                            So what if I want to select more than one node?  That's where <code>querySelectorAll</code> comes into
+                            play.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        var anchors = document.querySelectorAll("ul li a");
+        console.log(anchors);
+        console.log(anchors.length);
+    </code>
+</pre>
+
+                        <div class="point">
+                            The <code>querySelectorAll</code> function returns a <code>NodeList</code> which looks like an array, but
+                            actually isn't.  It's kind of like the <code>arguments</code> property inside a function; it has a length
+                            property, but doesn't have other array methods like push, pop, etc.
+                        </div>
+
+                        <div class="point">
+                            A <code>NodeList</code> object provides an <code>item</code> function that you can use to select a specific
+                            item at a specified index.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        console.log(anchors.item(2));
+        console.log(anchors.item(10));
+    </code>
+</pre>
+
+                        <div class="point">
+                            Since a <code>NodeList</code> looks a lot like an array and has a length property, it can be
+                            used as the basis for a loop, yeah?  Let's loop over each link and log to the console the <code>href</code>
+                            property of each node.
+                        </div>
+
+<pre>
+    <code class="language-javascript">
+        for (var i = 0; i < anchors.length; i++) {
+        var anchor = anchors.item(i);
+        console.log(anchor.href);
+        }
+    </code>
+</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="text-right">Take Home Assignment</h2>
+                </div>
+                <div class="col-md-9">
+                    <div class="point">
+                        <ul class="list">
+                            <li>Use the Repo that we created in the Skill Builder and flesh out the rest of the Javascript app</li>
+                            <li>Display the contents of the array on the web page using DOM manipulation</li>
+                            <li>Use at least 3 colors (including text colors) and pick a cool font from Google Fonts(if you aren't sure what that is, Google it! It should be one of the first results to appear!)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- closing the main container -->
+        </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./static/js/prism.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./static/js/nav.js"></script>
+        <script type="text/javascript">
+            function geekwiseClass() {
+                console.log("Congrats, you found a global function");
+            }
+        </script>
+    </body>
+</html>
+
