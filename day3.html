@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Geekwise Javascript 1</title>
+    <title>Geekwise Bootcamp 1</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/prism.css" />
@@ -25,280 +25,218 @@
             </div>
             <div class="col-md-9 concepts">
                 <ul>
-                    <li>Review Take Home Assignment</li>
-                    <li>Skill Builder</li>
-                    <li>Control Flow</li>
-                    <li>Take Home Assignment</li>
+                    <li>Warmup/Review</li>
+                    <li>Styling Methods: Inline, Internal, External</li>
+                    <li>Positioning</li>
+                    <li>Spacing</li>
                 </ul>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Skill Builder</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">
-                    Write a small JS program (chrome snippet is fine) that will: 
+          <div class="col-md-3">
+            <h2 class="text-right">Styling Methods</h2>
+          </div>
+          <div class="col-md-9">
+            <h3>Inline</h3>
+            <div class="point">Inline styling allows the user to add a style attribute to an element and give a specific snippet of code a particular style</div>
+            <div class="point">One of the drawbacks is that multiple style properties clutters up the code and can slow browser load times</div>
 
-                    <ul class="list">
-                        <li>Prompt for two numbers</li>
-                        <li>Store them into variables</li>
-                        <li>Parse the values into numbers (parseInt)</li>
-                        <li>Multiply the two numbers and alert the result</li>
-                        <li>Divide the two numbers and alert the result</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Control Flow</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">Control flow simply means controlling what code actually gets executed in your program.</div>
-                <div class="point">
-                    It's very common that your application will want to behave differently based on available data.  One
-                    common scenario is a login/authentication strategy.  If you build an application where you want to
-                    require the user to log in, you'll want to show a login screen if they aren't logged in, or redirect
-                    them to their home page if they are.
-                </div>
-                <div class="point">The kinds of control flow we are going to look at today:
-                    <ul class="list">
-                        <li><code>if</code></li>
-                        <li><code>if else</code></li>
-                        <li><code>if else if</code></li>
-                        <li><code>if else if else</code></li>
-                        <li><code>switch</code></li>
-                        <li>ternary</li>
-                    </ul>
-                    In almost all cases, the control flow will evaluate some condition and react accordingly.  This
-                    enables us to run some code while skipping other parts.
-                </div>
-                <div class="point">The most basic form of control flow is <code>if</code> / <code>else</code> statements.</div>
-<pre>
-    <code class="language-javascript">
-//Simple if statement
-if (true) {
+            <h3>Internal</h3>
+            <div class="point">A secondary method is known as internal styling</div>
+            <div class="point">This method allows the user to include style properties in the head of the html code</div>
 
-    console.log("yup");
+            <pre class="language-markup">
+                <code class="language-markup">
+&lt;HTML&gt;
+ &lt;head&gt;
+     &lt;title&gt;Styling Methods&lt;/title&gt;
+     &lt;style&gt;
+       body {
+         color: green;
+         /*This gives the font color in the body a color of green*/
+       }
 
-}
-    </code>
-</pre>
-                <div class="point">
-                    <div class="excercise">
-                        Try it: Create a program that prompts the user for their age. In an if statement check 
-                        if the user is younger than 18. If so, alert the user, "You're a youngun!"
-                    </div>
-                </div>
+       h1 {
+         text-align: center;
+         background-color:blue;
+         width: 300px;
+       }
+    &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
 
-<pre>
-    <code class="language-javascript">
-//if else, if the first condition is true, run the first
-//block, else run the second block
-if (false) {
+     &lt;h1&gt;
+       My main header has a width of 300px, background color of blue and the text is aligned to the center
+     &lt;/h1&gt;
 
-    alert("it's true");
+ &lt;/body&gt;
+&lt;/HTML&gt;
+               </code>
+            </pre>
 
-} else {
+            <h3>External</h3>
+            <div class="point">Internal styling gives the user more room to write in styles, but can clutter the head of the html code</div>
+            <div class="point">External styling is the most common practice</div>
+            <div class="point">External styling requires the creation of an external css stylesheet and then linking the file inside the html head</div>
+            <pre class="language-markup">
+                <code class="language-markup">
+&lt;HTML&gt;
+ &lt;head&gt;
+     &lt;title&gt;Styling Methods&lt;/title&gt;
+     &lt;link rel="stylesheet" href="css/styles.css"&gt;
+     &lt;!--
+       link tags require the stylesheet reference in the rel attribute and the path of the css document in the href attribute
+       --&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
 
-    alert("it's false");
+     &lt;h1&gt;
+       My main header
+     &lt;/h1&gt;
 
-}
-    </code>
-</pre>
-                <div class="point">
-                    <div class="excercise">
-                        Try it: Using the code from earlier, add an if else statement alerting all those older 
-                        than 18 with anything you like.
-                    </div>
-                </div>
+     &lt;p class="p_class"&gt;
+       My P tag has a class attribute that will be referenced back to the styles.css document
+     &lt;/p&gt;
 
-<pre>
-    <code class="language-javascript">
-//if else if statments, the last else is our "fallback"
-if (condition1) {
+     &lt;div class="box-1"&gt;
+     &lt;/div&gt;
 
+     &lt;div class="box-2"&gt;
+     &lt;/div&gt;
 
-} else if (condition2) {
+     &lt;div class="box-3"&gt;
+     &lt;/div&gt;
 
+ &lt;/body&gt;
+&lt;/HTML&gt;
+             </code>
+          </pre>
 
-} else {
+          <div class="point">the styles.css document would look like:</div>
 
+          <pre class="language-css">
+              <code class="language-css">
+    /*The Beginning of your styles.css document*/
 
-}
-    </code>
-</pre>
-                <div class="point">
-                    <div class="excercise">
-                        Try it: Once more, alter the code and add an else if that checks if the user is between 18 
-                        and 50. In each section alert the user with something different.
-                    </div>
-                </div>
+    body{
+      /* Adding style to the body */
+      color: blue;
+    }
 
-                <div class="point">
-                    With <code>if</code> statements, it's possible to evaluate multiple conditions, and we use logical
-                    operators to do so.  This lets us say, "If this <code>AND</code> that are true, then run this code."<ul class="list">
-                        <li><code>&&</code> the and operator</li>
-                        <li><code>||</code> the or operator</li>
-                    </ul>
-                </div>
+    h1{
+      text-align: center;
+      color: green;
+      /* Targeting the h1 font color overrides the body's color*/
+    }
 
-                <pre><code class="language-javascript">
-var a = true;
-var b = false;
-
-// If both a AND b are true...
-if (a && b) {
-    console.log("both a and b are true");
-} else {
-    console.log("one of a or b are false");
-}
-
-//If a OR b is true
-if (a || b) {
-    console.log("one of a or b are true");
-}
-                </code></pre>
-
-                <div class="point">
-                    <div class="excercise">
-                        Try it: Continuing on with our exercise, alter the code to now ask for both the user's age and gender. 
-                        Using the two inputs set up an if else if ladder that will alert something different for each combination 
-                        of variables. 
-                    </div>
-                </div>
-
-                <div class="point">
-                    Another common control flow element is the <code>switch</code> statement.  Switch will evaluate the
-                    condition and then perform a given block of code based on that value.  It looks like:
-                </div>
-
-<pre><code class="language-javascript">
-var condition = "foo";
-
-switch (condition) {
-case "foo":
-    alert("foo");
-    break;
-case "bar":
-    alert("bar");
-    break;
-default:
-    alert("wasn't foo or bar");
-}
-</code></pre>
-
-                <div class="point">
-                    <div class="excercise">
-                        Try it: Finally, using only the age variable, refactor your code to use a switch statement instead of an if 
-                        statement.
-                        <br>
-                        <br>
-                        Challenge: Use both variables with the switch statement.
-                    </div>
-                </div>
-
-                <div class="point">
-                    Careful with Switch statements however; they can lead to some unwanted results if you forget the
-                    <code>break</code> keyword called "fall-through" or "pass-through". What happens when you run the
-                    switch statement and omit the break in the "foo" case?
-                </div>
-
-<pre><code class="language-javascript">
-var condition = "foo";
-
-switch (condition) {
-case "foo":
-    alert("foo");
-case "bar":
-    alert("bar");
-    break;
-default:
-    alert("wasn't foo or bar");
-}
-</code></pre>
-
-                <div class="point">
-                    Ternary operators are a shorthand if else type of control flow.
-                </div>
-                <div class="point">
-                    They use the <code>?</code> and the <code>:</code> as the syntax.
-                </div>
-                <div class="point">
-                    It looks like: <code class="language-javascript">condition ? trueValue : falseValue;</code>
-                </div>
-                <pre><code class="language-javascript">
-var loggedIn = true;
-var needsLogin = loggedIn ? false : true;
-
-var age = 31;
-var logout = age < 13 ? true : false;
-                </code></pre>
-
-                <div class="point">Ternary operators are great for simple situations where the conditonal statement can be boiled down to a yes or no answer.</div>
-                <div class="point">Avoid nested ternary</div>
-                <pre><code class="language-javascript">
-var dogs = false
-var cats = false;
-var fish = true;
-var hasPets = dogs ? true : cats ? true : fish ? true : false; //wat?
-                </code></pre>
-
-                <div class="point">Just because you can do something, doesn't mean you should...
-                <br>
-                Not everything is a nail just because you're holding a hammer.</div>
-
-            </div>
+    .p_class{
+      width: 300px;
+      background-color: red;
+    }
+            </code>
+          </pre>
+          </div>
         </div>
 
         <div class="row">
-            <div class="col-md-3"><h2 class="text-right">Operators & Conditions in Practice</h2></div>
-            <div class="col-md-9">
-                <div class="point">
-                    <h4>Who's Practiced More?</h4>
-                    <div class="problem">
-                        Jules has been writing Javascript for 4 years.  She spends 4 hours every day writing Javascript.
-                        Hallie has been writing Javascript for 6 years, but only spends about 2.5 hours a day coding.
-                    </div>
-                    <br>
-                    <div class="problem">
-                        Write some code that will determine the total number of hours each have spent coding.  Using
-                        control flow log the name (Jules or Hallie) that has had the most time at the keyboard.
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="col-md-3">
+            <h2 class="text-right">Styling Concepts</h2>
+          </div>
+          <div class="col-md-9">
+            <h3>Positioning</h3>
+            <div class="point">Web development requires attention to positioning and space</div>
+            <div class="point">It is important for the developer to be in control of the elements on the page</div>
+            <div class="point">Thus, it is good practice to consider positioning when creating elements on a page</div>
+            <div class="point">The styling properties, width, height, float and clear are core to controlling the positioning of elements</div>
+            <pre class="language-css">
+              <code class="language-css">
+  /*Your styles.css document */
+  /*Each class below is attached to div's on your html document*/
+  .box-1 {
+    width: 300px;
+    height: 500px;
+    float: left;
+    background-color: green;
+  }
 
-        
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Take Home Assignment</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">
-                    Create a program that will:
+  .box-2 {
+    width: 300px;
+    height: 500px;
+    float: left;
+    background-color: red;
+  }
 
-                    <ul class="list">
-                        <li>
-                            Prompt the user for something that they would like to do.
-                        </li>
-                        <li>
-                            Make sure that the user actually types something.
-                        </li>
-                        <li>
-                            If the user has not typed anything, alert them that they need to type something and then terminate 
-                            the program.
-                        </li>
-                        <li>
-                            If they have input a to do item, alert the user with the item and console log it.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  .box-3 {
+    width: 900px;
+    height: 200px;
+    float: left;
+    clear: both;
+    background-color: orange;
+  }
+
+  /*The above classes create three div's:
+    the first two boxes are of equal size but have different bg-colors
+    the third box is of a different size and sits below the other two boxes
+  */
+              </code>
+            </pre>
+
+            <h3>Spacing</h3>
+            <div class="point">Spacial awareness is another core concept when styling</div>
+            <div class="point">Spacing requires the developer to think about how the elements are going to fit</div>
+            <div class="point">The margin, border and padding style properties are core to handling space on your page</div>
+
+            <pre class="language-css">
+              <code class="language-css">
+  /*Your styles.css document */
+  /*Each class below is attached to div's on your html document*/
+  .box-1 {
+    width: 300px;
+    height: 500px;
+    float: left;
+    background-color: green;
+
+    /*controlling space*/
+    margin: 0px 10px 0px 0px;
+    padding: 10px;
+  }
+
+  .box-2 {
+    width: 300px;
+    height: 500px;
+    float: left;
+    background-color: red;
+
+    /*controlling space*/
+    margin: 0px 10px 0px 10px;
+    border: 1px solid black;
+  }
+
+  .box-3 {
+    width: 900px;
+    height: 200px;
+    float: left;
+    clear: both;
+    background-color: orange;
+
+    /*controlling space*/
+    margin: 20px 0px 10px 0px;
+    padding: 15px;
+    border: 1px solid yellow;
+  }
+
+  /*
+    - The code above has been changed to include spacing properties, margin/padding/border
+    - the first box has a margin to its right of 10px and padding inside of 10px all the way around
+    - the second box has a margin to the left of 10px and a black solid border of 1px
+    - the third box has a margin on top of 20px and below of 10px, padding inside of 15 px and a 1px solid green border
+  */
+              </code>
+            </pre>
+
+
+
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
