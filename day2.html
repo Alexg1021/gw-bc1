@@ -77,10 +77,13 @@
 &lt;body&gt;
     &lt;h1 class="someclass"&gt;Heading tags are used as titles to pages or articles!&lt;/h1&gt;
 
-    &lt;p class="someclass"&gt;Paragraph tags allow you to include text to provide the reader with
-    information&lt;/p&gt;
+    &lt;p class="someclass"&gt;
+    Paragraph tags allow you to include text to provide the reader with information
+    &lt;/p&gt;
 
-    &lt;p class="someclass"&gt;Lorem Ipsum text is a great tool to include when testing your web pages&lt;/p&gt;
+    &lt;p class="someclass"&gt;
+      Lorem Ipsum text is a great tool to include when testing your web pages
+    &lt;/p&gt;
 
     &lt;div class="someclass"&gt;div tags use inline block styling!&lt;/div&gt;
     &lt;div class="someclass"&gt;div tags are great when dividing groups of code&lt;/div&gt;
@@ -96,13 +99,21 @@
       &lt;li&gt;And then nest li tags inside your ol tag create your list of items&lt;/li&gt;
     &lt;/ol&gt;
 
-    &lt;a href="http://www.some_site.com"&gt;a tags are used to link to internal or external destinations&lt;/a&gt;
-    &lt;a href="http://www.some_site.com"&gt;a tags require the href attribute where the destined path is defined&lt;/a&gt;
+    &lt;a href="http://www.some_site.com"&gt;
+      a tags are used to link to internal or external destinations
+    &lt;/a&gt;
+    &lt;a href="http://www.some_site.com"&gt;
+      a tags require the href attribute where the destined path is defined
+    &lt;/a&gt;
 
-    &lt;img src="path_folder/name_of_file.jpg"/&gt;img tags are used for placing images in your site.  img tags do not require a closing tag as content
-                is not typically added inside the tag
+    &lt;img src="path_folder/name_of_file.jpg"/&gt;
+      img tags are used for placing images in your site. img tags do not require a closing tag as content
+      is not typically added inside the tag
 
-   &lt;a href="http://www.google.com"&gt;&lt;img src="path_folder/name_of_file.jpg"/&gt;a common practice is to nest an img tag inside an a tag in order to create a linkable img&lt;/a&gt;
+   &lt;a href="http://www.google.com"&gt;
+     &lt;img src="path_folder/name_of_file.jpg"/&gt;
+       a common practice is to nest an img tag inside an a tag in order to create a linkable img
+   &lt;/a&gt;
 
 &lt;/body&gt;
 &lt;/HTML&gt;
@@ -121,38 +132,48 @@
             <div class="point">An example includes</div>
              <pre class="language-markup">
                  <code class="language-markup">
-                   &lt;HTML&gt;
-                      &lt;head&gt;
-                          &lt;title&gt;Nesting Concepts&lt;/title&gt;
-                      &lt;/head&gt;
-                      &lt;body&gt;
+&lt;HTML&gt;
+  &lt;head&gt;
+      &lt;title&gt;Nesting Concepts&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-                        &lt;!--&gt;Basic Nesting Principles&lt;--&gt;
-                        &lt;div class="outer-box" id="level-1"&gt;
-                            &lt;div class="sub-box" id="level-2"&gt;
-                                &lt;div class="sub-box" id="level-3"&gt; This is the inner most box and in the third level of the group of code&lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+    &lt;!--&gt;Basic Nesting Principles&lt;--&gt;
+    &lt;div class="outer-box" id="level-1"&gt;
+        &lt;div class="sub-box" id="level-2"&gt;
+            &lt;div class="sub-box" id="level-3"&gt;
+              This is the inner most box and in the third level of the group of code
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-                        &lt;!--&gt;Another Example: Nesting with elements on the same level&lt;--&gt;
-                        &lt;div class="outer-box" id="level-1"&gt;
-                          &lt;div class="sub-box" id="level-2"&gt;
-                              &lt;h1 class="sub-box" id="level-3"&gt;Header on the third level of the nested code &lt;/h1&gt;
-                              &lt;p class="sub-box" id="level-3"&gt;paragraph text on the same level as the header&lt;/p&gt;
-                          &lt;/div&gt;
+    &lt;!--&gt;Another Example: Nesting with elements on the same level&lt;--&gt;
+    &lt;div class="outer-box" id="level-1"&gt;
+      &lt;div class="sub-box" id="level-2"&gt;
+          &lt;h1 class="sub-box" id="level-3"&gt;
+            Header on the third level of the nested code
+          &lt;/h1&gt;
+          &lt;p class="sub-box" id="level-3"&gt;
+          paragraph text on the same level as the header
+          &lt;/p&gt;
+      &lt;/div&gt;
 
-                          &lt;div class="sub-box" id="level-2"&gt;
-                              &lt;h2 class="sub-header" id="level-3"&gt;Header on the third level of the nested code&lt;/h2&gt;
-                              &lt;ul class="sub-list" id="level-3"&gt;
-                                  &lt;li class="sub-list" id="level-4"&gt;The overall list is on the third level of this group of code&lt;/li&gt;
-                                  &lt;li class="sub-list" id="level-4"&gt;But each list item is nested inside the ul an thus on the fourth level&lt;/li&gt;
-                              &lt;/ul&gt;
-                          &lt;/div&gt;
-                        &lt;/div&gt;
+      &lt;div class="sub-box" id="level-2"&gt;
+          &lt;h2 class="sub-header" id="level-3"&gt;Header on the third level of the nested code&lt;/h2&gt;
+          &lt;ul class="sub-list" id="level-3"&gt;
+              &lt;li class="sub-list" id="level-4"&gt;
+                The overall list is on the third level of this group of code
+              &lt;/li&gt;
+              &lt;li class="sub-list" id="level-4"&gt;
+                But each list item is nested inside the ul an thus on the fourth level
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 
 
-                      &lt;/body&gt;
-                    &lt;/HTML&gt;
+  &lt;/body&gt;
+&lt;/HTML&gt;
                 </code>
              </pre>
            </div>
@@ -166,21 +187,23 @@
 
              <pre class="language-markup">
                  <code class="language-markup">
-                   &lt;HTML&gt;
-                      &lt;head&gt;
-                          &lt;title&gt;Nesting Concepts&lt;/title&gt;
-                      &lt;/head&gt;
-                      &lt;body&gt;
+&lt;HTML&gt;
+  &lt;head&gt;
+      &lt;title&gt;Nesting Concepts&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-                        &lt;!--&gt;Using the Style Attribute to Style html&lt;--&gt;
-                        &lt;div class="outer-box" id="level-1" style="width:300px;"&gt;
-                            &lt;div class="sub-box" id="level-2" style="background-color: green;"&gt;
-                                &lt;div class="sub-box" id="level-3" style="color: red;" &gt; This is the inner most box and in the third level of the group of code&lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+    &lt;!--&gt;Using the Style Attribute to Style html&lt;--&gt;
+    &lt;div class="outer-box" id="level-1" style="width:300px;"&gt;
+        &lt;div class="sub-box" id="level-2" style="background-color: green;"&gt;
+            &lt;div class="sub-box" id="level-3" style="color: red;" &gt;
+              This is the inner most box and in the third level of the group of code
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-                      &lt;/body&gt;
-                    &lt;/HTML&gt;
+  &lt;/body&gt;
+&lt;/HTML&gt;
                 </code>
              </pre>
            </div>
