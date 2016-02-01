@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Geekwise Javascript 1</title>
+    <title>Geekwise Bootcamp 1</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/prism.css" />
@@ -25,43 +25,39 @@
             </div>
             <div class="col-md-9 concepts">
                 <ul>
-                    <li>Alert / Confirm / Prompt</li>
-                    <li>Skill Builder</li>
-                    <li>Symantics in the Syntax</li>
-                    <li>Operators</li>
-                    <li>Math</li><!-- 
-                    <li></li> -->
+                    <li>File Structure</li>
+                    <li>Playing with HTML Elements</li>
+                    <li>Nesting</li>
+                    <li>Intro to Styling</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-3">
-                <h2 class="text-right">Alert / Confirm / Prompt</h2>
+                <h2 class="text-right">File Structure</h2>
             </div>
             <div class="col-md-9">
-                <div class="refresh">
-                    We will get much deeper into functions in the following class sessions. For now, understand
-                    a function is nothing more than some grouped Javascript behavior that performs
-                    specific actions.  You <code>call</code> a function.  It <code>return</code>s a value.
-                </div>
-                <div class="point"><code>alert()</code> and <code>confirm()</code> and <code>prompt()</code> can all be used to convey / solicit information from a user.</div>
-                <div class="point"><code>alert()</code> is a read only type of deal.</div>
-                <div class="point"><code>confirm()</code> will return bool depending on the button the user clicked.</div>
-                <div class="point"><code>prompt()</code> will allow you to ask the user for input, and then use it in your script.</div>
-                <div class="point">All three functions stop the execution of the Javascript until some action takes place.</div>
                 <div class="point">
-                    <div class="exampleLeadin">Some Examples</div>
+                    File structure implies the order and organization in which you create your various web based files.  It is important
+                    to maintain an organized and structured file system so that you may refer to any particular file with efficiency.
+                </div>
+
+                <div class="point">
+                    <div class="exampleLeadin">An appropriate file structure example:</div>
                     <pre>
-                        <code class="language-javascript">
-//Tell the user something
-alert("Ah, hi there, I'll wait here till you close me");
+                        <code class="">
+                            main-folder
+                              |__css
+                              |   |__stylesheet.css
+                              |
+                              |__js
+                              |   |__app.js
+                              |
+                              |__img
+                              |
+                              |__index.html
 
-//Confirm a user's action
-confirm("Sure you want to do that...?");
-
-//Ask the user for input
-prompt("What is your name?");
                         </code>
                     </pre>
                 </div>
@@ -69,251 +65,127 @@ prompt("What is your name?");
         </div>
 
         <div class="row">
-            <div class="col-md-3"><h2 class="text-right">Skill Builder</h2></div>
+            <div class="col-md-3"><h2 class="text-right">Basic HTML Elements</h2></div>
             <div class="col-md-9">
-                <div class="point">
-                    <ul>
-                        <li>Create a new script called <code>app.js</code></li>
-                        <li>In app.js do the following:
-                            <ul class="list">
-                                <li>Ask for your first name</li>
-                                <li>Ask for your last name</li>
-                                <li>Log your first name to the console</li>
-                                <li>Alert your last name</li>
-                                <li>Confirm (anything) and alert the result of the confirm</li>
-                                <li>Include your <code>app.js</code> file in a blank empty HTML page</li>
-                                <li>Execute your script</li>
-                                <li>Confirm that your script functions the way it's expected to</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+              <div class="point">Some of the common elements that are used by developers:</div>
+              <pre class="language-markup">
+                   <code class="language-markup">
+                      &lt;HTML&gt;
+                      &lt;head&gt;
+                          &lt;title&gt;My page&lt;/title&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                          &lt;h1 class="someclass"&gt;Heading tags are used as titles to pages or articles!&lt;/h1&gt;
 
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Symantics in the Syntax</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">Readability Matters</div>
-                <div class="point">camelCasing</div>
-                <div class="point">CaSe SeNsItIvItY</div>
-                <div class="point">Whitespace</div>
-            </div>
-        </div>
+                          &lt;p class="someclass"&gt;Paragraph tags allow you to include text to provide the reader with
+                          information&lt;/p&gt;
 
-        <div class="row">
-            <div class="col-md-3"><h2 class="text-right">Operators</h2></div>
-            <div class="col-md-9">
-                <div class="point">
-                    We talked a bit about number data types in the <a href="day1.html">last class</a>, but not much about
-                    what we can do with them.
-                </div>
-                <div class="point">Operators allow us to take action and do something with the variables we've created.</div>
+                          &lt;p class="someclass"&gt;Lorem Ipsum text is a great tool to include when testing your web pages&lt;/p&gt;
 
-                <div class="point">
-                    Some operators you will see often include:
-                    <ul class="list">
-                        <li>Mathematical
-                            <ul class="list">
-                                <li><code>=</code> (equals, assignment)</li>
-                                <li><code>+</code> (addition)</li>
-                                <li><code>-</code> (subtraction)</li>
-                                <li><code>*</code> (multiplication)</li>
-                                <li><code>/</code> (division)</li>
-                                <li><code>%</code> (modulus)</li>
-                                <li><h3>Shorthand Operators</h3></li>
-                                <li><code>+=</code></li>
-                                <li><code>-=</code></li>
-                                <li><code>*=</code></li>
-                                <li><code>/=</code></li>
-                            </ul>
-                        </li>
-                        <li>Comparison
-                            <ul class="list">
-                                <li><code>==</code> (loose comparison)</li>
-                                <li><code>===</code> (strict comparison)</li>
-                                <li><code>!=</code> (loose not equal comparison)</li>
-                                <li><code>!==</code> (strict not equal comparison)</li>
-                                <li><code><</code> (less than)</li>
-                                <li><code>></code> (greater than)</li>
-                                <li><code><=</code> (less than or equal to)</li>
-                                <li><code>>=</code> (greater than or equal to)</li>
-                            </ul>
-                        </li>
-                        <li>Logical
-                            <ul class="list">
-                                <li><code>&&</code> (and)</li>
-                                <li><code>||</code> (or)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                          &lt;div class="someclass"&gt;div tags use inline block styling!&lt;/div&gt;
+                          &lt;div class="someclass"&gt;div tags are great when dividing groups of code&lt;/div&gt;
 
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Math</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">You can perform mathematical calculations using operators as discussed above.
-                    <div class="excercise">
-                        Try it: open your console and run a few calculations like <code>2 + 2</code>, etc...
-                    </div>
-                </div>
+                          &lt;ul class="someclass"&gt;
+                            &lt;li&gt;Use ul tags to create an unordered list with bullet points&lt;/li&gt;
+                            &lt;li&gt;And then nest li tags inside your ul tag create your list of items&lt;/li&gt;
+                            &lt;li&gt;lists are frequently used tools for web developers&lt;/li&gt;
+                          &lt;/ul&gt;
 
-                <div class="point">
-                    The "value" of the expression can be stored for later use.
-                    <div class="excercise">
-                        Try it: create a variable called <code>result</code>.  Add two numbers together and store the
-                        value in your result variable using the <code>=</code> operator.  Log that value to the console.
-                    </div>
-                </div>
+                          &lt;ol class="someclass"&gt;
+                            &lt;li&gt;Use ol tags to create an ordered list with numbered points&lt;/li&gt;
+                            &lt;li&gt;And then nest li tags inside your ol tag create your list of items&lt;/li&gt;
+                          &lt;/ol&gt;
 
-                <div class="point">
-                    Shorthand notation exists for quickly operating on an existing variable.
-                    <ul class="list">
-                        <li><code>+=</code></li>
-                        <li><code>-=</code></li>
-                        <li><code>*=</code></li>
-                        <li><code>/=</code></li>
-                    </ul>
-                    With these shortcut helpers, you can turn this:
-                </div>
-                <pre><code class="language-javascript">
-var a = 0;
-a = a + 5; //5
+                          &lt;a href="http://www.some_site.com"&gt;a tags are used to link to internal or external destinations&lt;/a&gt;
+                          &lt;a href="http://www.some_site.com"&gt;a tags require the href attribute where the destined path is defined&lt;/a&gt;
 
-var b = 10;
-b = b / 5; //2
-                </code></pre>
-                <div class="point">
-                    into this:
-                </div>
-<pre>
-    <code class="language-javascript">
-var a = 0;
+                          &lt;img src="path_folder/name_of_file.jpg"/&gt;img tags are used for placing images in your site.  img tags do not require a closing tag as content
+                                      is not typically added inside the tag
 
-a += 5;
+                         &lt;a href="http://www.google.com"&gt;&lt;img src="path_folder/name_of_file.jpg"/&gt;a common practice is to nest an img tag inside an a tag in order to create a linkable img&lt;/a&gt;
 
-console.log(a);
+                      &lt;/body&gt;
+                      &lt;/HTML&gt;
+                  </code>
+              </pre>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col-md-3"><h2 class="text-right">Nesting</h2></div>
+           <div class="col-md-9">
+             <div class="point">Nesting refers to the concept of code within code</div>
+             <div class="point">Think of the Russian Dolls as an example, where the larger outer doll houses many smaller dolls
+            inside</div>
+            <div class="point">The outermost element is referred to as the parent and the sub-elements are referred to as children</div>
+            <div class="point">An example includes</div>
+             <pre class="language-markup">
+                 <code class="language-markup">
+                   &lt;HTML&gt;
+                      &lt;head&gt;
+                          &lt;title&gt;Nesting Concepts&lt;/title&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+
+                        &lt;!--&gt;Basic Nesting Principles&lt;--&gt;
+                        &lt;div class="outer-box" id="level-1"&gt;
+                            &lt;div class="sub-box" id="level-2"&gt;
+                                &lt;div class="sub-box" id="level-3"&gt; This is the inner most box and in the third level of the group of code&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!--&gt;Another Example: Nesting with elements on the same level&lt;--&gt;
+                        &lt;div class="outer-box" id="level-1"&gt;
+                          &lt;div class="sub-box" id="level-2"&gt;
+                              &lt;h1 class="sub-box" id="level-3"&gt;Header on the third level of the nested code &lt;/h1&gt;
+                              &lt;p class="sub-box" id="level-3"&gt;paragraph text on the same level as the header&lt;/p&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="sub-box" id="level-2"&gt;
+                              &lt;h2 class="sub-header" id="level-3"&gt;Header on the third level of the nested code&lt;/h2&gt;
+                              &lt;ul class="sub-list" id="level-3"&gt;
+                                  &lt;li class="sub-list" id="level-4"&gt;The overall list is on the third level of this group of code&lt;/li&gt;
+                                  &lt;li class="sub-list" id="level-4"&gt;But each list item is nested inside the ul an thus on the fourth level&lt;/li&gt;
+                              &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
 
 
-var b = 10;
+                      &lt;/body&gt;
+                    &lt;/HTML&gt;
+                </code>
+             </pre>
+           </div>
+         </div>
 
-b /= 5;
+         <div class="row">
+           <div class="col-md-3"><h2 class="text-right">Styling</h2></div>
+           <div class="col-md-9">
+             <div class="point">To style an element use the style attribute in an element</div>
+             <div class="point">This allows the user greater control of the code, but using the style attribute has its drawbacks</div>
 
-console.log(b);
-    </code>
-</pre>
+             <pre class="language-markup">
+                 <code class="language-markup">
+                   &lt;HTML&gt;
+                      &lt;head&gt;
+                          &lt;title&gt;Nesting Concepts&lt;/title&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
 
-                <div class="point">
-                    Operator Precedence works like it did when you were in sixth grade.
-                    <ol class="list">
-                        <li>Parentheses</li>
-                        <li>Multiplication / Division</li>
-                        <li>Addition / Subtraction</li>
-                    </ol>
-                </div>
+                        &lt;!--&gt;Using the Style Attribute to Style html&lt;--&gt;
+                        &lt;div class="outer-box" id="level-1" style="width:300px;"&gt;
+                            &lt;div class="sub-box" id="level-2" style="background-color: green;"&gt;
+                                &lt;div class="sub-box" id="level-3" style="color: red;" &gt; This is the inner most box and in the third level of the group of code&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
 
-                <pre><code class="language-javascript">
-//What's the answer?
-var a = 5 + 5 * 10;
-console.log(a);
-                </code></pre>
+                      &lt;/body&gt;
+                    &lt;/HTML&gt;
+                </code>
+             </pre>
+           </div>
+         </div>
 
-                <div class="point">
-                    If you wanted to have the <code>5 + 5</code> evaluate first, you would need to use
-                    parentheses to group the parts you want to take precedence.
-                </div>
-                <pre><code class="language-javascript">
-//What's the answer?
-var a = (5 + 5) * 10;
-console.log(a);
-                </code></pre>
-
-                <div class="point">
-                    The modulus <code>%</code> is a usful operator to know how to leverage.
-                </div>
-                <div class="point">You can use modulus to determine if something is even or odd. A typical use is if
-                you are generating content like rows in a table and you want to put an "even" class on even rows
-                and an "odd" class on odd rows.</div>
-                <pre><code class="language-javascript">
-var a = 5;
-console.log(a % 2); // 1
-
-
-var b = 6;
-console.log(b % 3); // 0
-                </code></pre>
-
-                <div class="point">It's also very easy to increment / decrement a number by one using Javascript.</div>
-                <div class="point">Use the <code>++</code> or <code>--</code> operators, Note: these do not require
-                re-assigning the value to a variable; they work on existing variables.</div>
-
-                <pre><code class="language-javascript">
-var a = 5;
-a++;
-console.log(a);
-
-
-var b = 6;
-b--;
-console.log(b);
-                </code></pre>
-
-                <div class="point"><code>parseInt(number)</code> can be used for converting a float to an integer, or for turning a string
-                into an integer.</div>
-
-                <pre><code class="language-javascript">
-var a = 1.6;
-var b = parseInt(a); // number data type 1
-
-var c = "5";
-var d = parseInt(c); // number data type 5
-                </code></pre>
-
-                <div class="point">If you try to parse a value that can't be turned into a number, you will get NaN (
-                not a number)</div>
-
-                <pre><code class="language-javascript">
-var a = "foo";
-var b = parseInt(a); // NaN
-                </code></pre>
-
-                <div class="point">
-                    You can check if a value is NaN by using the isNaN function.
-                </div>
-
-                <pre><code class="language-javascript">
-var a = "foo";
-var b = parseInt(a); //NaN
-console.log(isNaN(b)); //true
-                </code></pre>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-right">Take Home Assignment</h2>
-            </div>
-            <div class="col-md-9">
-                <div class="point">
-                    Write a script and accompanying HTML file that will:
-                    <ol class="list">
-                        <li>Prompt for a number value (provide a default of 10)</li>
-                        <li>Prompt for another number value (provide a default of 10)</li>
-                        <li>Convert the promped values into integers.</li>
-                        <li>Add the numbers together and alert the user with the outcome</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="./static/js/prism.js"></script>
